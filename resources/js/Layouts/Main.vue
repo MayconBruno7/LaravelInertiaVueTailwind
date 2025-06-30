@@ -11,7 +11,6 @@ const show = ref(false);
 </script>
 
 <template>
-    <!-- overlay -->
     <div v-show="show" @click="show = false" class="fixed inset-0 z-40"></div>
 
     <header class="bg-slate-800 text-white">
@@ -31,7 +30,6 @@ const show = ref(false);
                         <i class="fa-solid fa-angle-down"></i>
                     </div>
 
-                    <!-------------- User dropdown menu -------------->
                     <div
                         v-show="show"
                         @click="show = false"
@@ -52,7 +50,6 @@ const show = ref(false);
                     </div>
                 </div>
 
-                <!-------------- Guest -------------->
                 <div v-else class="space-x-6">
                     <NavLink routeName="login" componentName="Auth/Login"
                         >Login</NavLink
