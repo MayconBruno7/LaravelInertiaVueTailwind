@@ -40,7 +40,7 @@ const submit = () => {
             <InputField
                 label="Email"
                 icon="at"
-                v-model="form.email"
+                v-model="form.email"    
             />
 
             <InputField

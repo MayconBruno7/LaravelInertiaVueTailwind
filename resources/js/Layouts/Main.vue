@@ -50,7 +50,42 @@ const show = ref(false);
                     </div>
                 </div>
 
-                <div v-else class="space-x-6">
+                <!-- Final v-if -->
+
+                <div class="relative">
+                    <div
+                        @click="show = !show"
+                        class="flex items-center gap-2 px-3 py-1 rounded-lg hover:bg-slate-700 cursor-pointer"
+                        :class="{ 'bg-slate-700': show }"
+                    >
+                        <p>Estudos</p>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+
+                    <div
+                        v-show="show"
+                        @click="show = false"
+                        class="absolute z-50 top-16 right-0 bg-slate-800 text-white rounded-lg border-slate-300 border overflow-hidden w-40"
+                    >
+                        <Link
+                            :href="route('exampleRef')"
+                            method="get"
+                            as="button"
+                            class="block w-full px-6 py-3 hover:bg-slate-700 text-left"
+                            >Exemplo de ref</Link
+                        >
+
+                        <Link
+                            :href="route('exampleWatch')"
+                            method="get"
+                            as="button"
+                            class="block w-full px-6 py-3 hover:bg-slate-700 text-left"
+                            >Exemplo de Watch</Link
+                        >
+                    </div>
+                </div>
+
+                <div class="space-x-6">
                     <NavLink routeName="login" componentName="Auth/Login"
                         >Login</NavLink
                     >
