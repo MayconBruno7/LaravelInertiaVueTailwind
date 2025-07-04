@@ -1,7 +1,7 @@
 <script setup>
 import { switchTheme } from "../theme";
 import NavLink from "../Components/NavLink.vue";
-import { usePage } from "@inertiajs/vue3";
+import { Link, usePage } from "@inertiajs/vue3";
 import { computed, ref } from "vue";
 
 const page = usePage();
@@ -82,6 +82,48 @@ const show = ref(false);
                             class="block w-full px-6 py-3 hover:bg-slate-700 text-left"
                             >Exemplo de Watch</Link
                         >
+
+                        <Link 
+                            :href="route('exampleComputed')"
+                            method="get"
+                            as="button"
+                            class="block w-full px-6 py-3 hover:bg-slate-700 text-left"
+                            >Exemplo de Computed</Link>
+
+                        <Link 
+                            :href="route('exampleProps')"
+                            method="get"
+                            as="button"
+                            class="block w-full px-6 py-3 hover:bg-slate-700 text-left"
+                            >Exemplo de Props</Link>
+
+                        <Link 
+                            :href="route('exampleVModel')"
+                            method="get"
+                            as="button"
+                            class="block w-full px-6 py-3 hover:bg-slate-700 text-left"
+                            >Exemplo de V-Model</Link>
+
+                        <Link 
+                            :href="route('exampleVFor')"
+                            method="get"
+                            as="button"
+                            class="block w-full px-6 py-3 hover:bg-slate-700 text-left"
+                            >Exemplo de V-For</Link>
+
+                        <Link 
+                            :href="route('exampleVIf')"
+                            method="get"
+                            as="button"
+                            class="block w-full px-6 py-3 hover:bg-slate-700 text-left"
+                            >Exemplo de V-IF</Link>  
+                            
+                        <Link 
+                            :href="route('exampleEmit')"
+                            method="get"
+                            as="button"
+                            class="block w-full px-6 py-3 hover:bg-slate-700 text-left"
+                            >Exemplo de Emit</Link>    
                     </div>
                 </div>
 
